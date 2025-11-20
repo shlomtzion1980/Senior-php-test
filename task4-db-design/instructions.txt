@@ -1,0 +1,14 @@
+Task 4 – DB Schema Design for Webhook Logs (30 minutes)
+
+Goal:
+Design a SQL table for storing webhook logs for payment gateway events.
+
+Requirements:
+- Support multiple attempts for the same transaction
+- Store raw JSON payload
+- Store retry count
+- Store processing status and timestamps
+- Be efficient to query: failed webhooks, last attempt per transaction, daily stats
+
+Deliverable:
+- A .sql file (or SQL snippet in instructions.txt) that creates the table with indexes.

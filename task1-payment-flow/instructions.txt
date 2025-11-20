@@ -1,0 +1,32 @@
+Task 1 – Mini Payment Flow (90 minutes)
+
+Goal:
+Build a small PHP payment handling endpoint (no frameworks) that:
+- Accepts POST fields: name, email, amount
+- Validates inputs (amount > 0, valid email, name not empty)
+- Calls a mock remote API to simulate approval/decline
+- Stores the transaction in MySQL using PDO prepared statements
+- Returns a JSON response with status and transaction_id
+
+Files provided:
+- database.sql : table schema
+- classes/Database.php : DB connection skeleton
+- classes/PaymentService.php : service skeleton
+- process-payment.php : entry point
+- public/index.html : simple form (optional for manual testing)
+
+Requirements (candidate should implement):
+1. Implement input validation and return HTTP 400 when invalid.
+2. Use cURL or file_get_contents with a timeout to call mock API.
+   For simulation: POST to https://mock.codes/200
+   The candidate can randomly choose approve/decline, or call the mock and send back a body {"approve": true}
+3. Use PDO prepared statements to insert into `transactions` table.
+4. Return JSON: { "status": "approved"|"declined", "transaction_id": <int> }
+5. Handle errors gracefully and return proper HTTP codes.
+
+Evaluation checklist:
+- Proper validation & sanitization
+- Use of PDO + prepared statements
+- Separation of concerns (DB class, service class)
+- Error handling on API failures
+- Clear, readable code

@@ -1,0 +1,18 @@
+Task 3 – Debugging (30 minutes)
+
+Goal:
+Fix the buggy TokenService class and explain all fixes.
+
+Provided file:
+- TokenService.php (contains intentional bugs)
+
+Tasks:
+1. Fix the constructor so it assigns the DB object correctly.
+2. Prevent SQL injection by using prepared statements.
+3. Add error handling (check PDO errors, ensure $db is valid).
+4. Ensure the method returns false on missing token and proper last4 string when found.
+5. Add comments explaining each fix.
+
+Deliverable:
+- Fixed TokenService.php with inline comments explaining fixes.
+- Short (3-6 lines) text file explaining why each fix was necessary.

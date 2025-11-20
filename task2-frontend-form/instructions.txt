@@ -1,0 +1,13 @@
+Task 2 – Frontend AJAX Form (20 minutes)
+
+Goal:
+Create an AJAX form that posts to the payment endpoint (/process-payment.php).
+
+Requirements:
+- Use fetch() or XHR to POST form data.
+- Show a green box for approved payments, red for declined.
+- Show validation errors client-side if fields are empty or invalid.
+- Handle network errors.
+
+Files:
+- form.html : place to implement the AJAX logic
